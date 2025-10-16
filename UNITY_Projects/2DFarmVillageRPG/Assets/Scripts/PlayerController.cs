@@ -1,16 +1,16 @@
-using UnityEngine.InputSystem;
+using System;
 using UnityEngine;
-using UnityEngine.Rendering.Universal.Internal;
-using UnityEngine.Scripting.APIUpdating;
 
-public class PlayerController:MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float movSpeed = 1f;
+    [SerializeField] private float jumpForce = 5f;
 
 
     private PlayerControls playerControls;
     private Vector2 movement;
     private Rigidbody2D rb;
+    private Boolean jumpPressed = false;
 
     private void Awake()
     {
@@ -26,11 +26,21 @@ public class PlayerController:MonoBehaviour
     private void PlayerInput()
     {
         movement = playerControls.Movement.Move.ReadValue<Vector2>();
+
+        if (playerControls.Movement.Jump.IsPressed())
+        {
+            Jump();
+        }
     }
 
     private void Move()
     {
         rb.MovePosition(rb.position + movement * (movSpeed + Time.fixedDeltaTime));
+    }
+
+    private void Jump()
+    {
+
     }
 
     private void Update()
@@ -41,6 +51,7 @@ public class PlayerController:MonoBehaviour
     private void FixedUpdate()
     {
         Move();
+        Jump();
     }
     
 }
