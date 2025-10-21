@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private Boolean jumpPressed = false;
 
+    private Boolean isGrounded;
+
     private void Awake()
     {
         playerControls = new PlayerControls();
@@ -31,8 +33,8 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        rb.MovePosition(rb.position + movement * (movSpeed + Time.fixedDeltaTime));
-    }
+        rb.MovePosition(rb.position + movement * movSpeed * Time.fixedDeltaTime);
+
 
     private void Jump()
     {
@@ -47,7 +49,8 @@ public class PlayerController : MonoBehaviour
     private void FixedUpdate()
     {
         Move();
-        if (jumpPressed)
+
+        if (jumpPressed && isGrounded)
         {
             Jump();
             jumpPressed = false;

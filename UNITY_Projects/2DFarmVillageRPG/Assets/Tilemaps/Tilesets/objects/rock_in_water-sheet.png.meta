@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 39e13791795a1104289fa814e7fa0c4a
+guid: 4cf3da69b85de2e4da68cbcf5e33d076
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1306193520314599711
-    second: water-sheet_0
+      213: 6806372921932341762
+    second: rock_in_water-sheet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: water-sheet_0
+      name: rock_in_water-sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 480
-        height: 48
+        width: 96
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1e63bbde9e77fdde0800000000000000
-      internalID: -1306193520314599711
+      spriteID: 2026d9c5c18157e50800000000000000
+      internalID: 6806372921932341762
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      water-sheet_0: -1306193520314599711
+      rock_in_water-sheet_0: 6806372921932341762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
