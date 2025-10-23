@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * movSpeed * Time.fixedDeltaTime);
 
-
+    }
     private void Jump()
     {
         rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
