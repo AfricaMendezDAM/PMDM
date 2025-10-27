@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private TMP_Text coinText;
 
 
-
     private Rigidbody2D rb;
     private PlayerControls controls;
     private Vector2 moveInput;
@@ -89,7 +88,16 @@ public class PlayerController : MonoBehaviour
             {
                 coinText.text = "Strawberries: " + counter;
             }
-                
+
+            if(counter >= 2)
+            {
+                GameManager.Instance.EndGame(true);
+            }
+
+        }
+        
+        if(collision.CompareTag("Death")){
+            GameManager.Instance.EndGame(false);
         }
     }
 }

@@ -1,20 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Btn1 : MonoBehaviour
+public class StartMenu : MonoBehaviour
 {
-    void Start()
-    {
 
-    }
-    
     public void playGame()
     {
         SceneManager.LoadScene("MainScene");
     }
-
-    void Update()
+    
+    public void exitGame()
     {
+        Debug.Log("QuitGame");
+        Application.Quit();
         
     }
+
+
 }
