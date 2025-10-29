@@ -21,9 +21,13 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        controls = new PlayerControls();
+    }
+
+    private void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-        controls = new PlayerControls();
     }
 
     private void OnEnable()
@@ -44,11 +48,17 @@ public class PlayerController : MonoBehaviour
         {
             jumpPressed = true;
             if (animator != null)
-                animator.SetBool("IsJumping", true);
+            {
+                animator.SetBool("IsJumping", true); 
+            }
+                
         }
 
         if (animator != null)
+        {
             animator.SetFloat("Speed", Mathf.Abs(moveInput.x));
+        }
+            
     }
 
     private void FixedUpdate()
