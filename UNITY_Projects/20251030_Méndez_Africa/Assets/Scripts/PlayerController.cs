@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //moveInput = new Vector2(rb.linearVelocity.x * speed, rb.linearVelocity.y);
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x * speed, rb.linearVelocity.y);
         moveInput = controls.Player.Move.ReadValue<Vector2>(); 
         jumpPressed = controls.Player.Jump.triggered;
 
