@@ -83,6 +83,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
             android:layout_marginTop="64dp"
+            android:layout_marginHorizontal="10dp"
             android:text="Contraseña"
             android:textSize="30dp"
             app:layout_constraintStart_toStartOf="parent"
