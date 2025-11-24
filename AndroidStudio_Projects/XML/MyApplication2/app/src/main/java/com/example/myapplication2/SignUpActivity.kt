@@ -11,6 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.animation.AnimatableView
 import com.google.android.material.textfield.TextInputEditText
+import java.util.UUID
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -59,8 +60,22 @@ class SignUpActivity : AppCompatActivity() {
 //        datePickerDialog.show();
 //    }
 
-    private fun createAccount(){
-        
+    private fun createAccount(userEmail: String, pwd: String){
+        val userName=findViewById<TextInputEditText>(R.id.editTextName)
+        val userFN=findViewById<TextInputEditText>(R.id.editTextApellido1)
+        val userSN=findViewById<TextInputEditText>(R.id.editTextApellido2)
+        val userBirthDate=findViewById<TextInputEditText>(R.id.editTextDate)
+        val newUser= User(
+            id= UUID.randomUUID().toString(),
+            userEmail,
+            userName.text.toString(),
+            pwd,
+            userFN.text.toString(),
+            userSN.text.toString(),
+            userBirthDate.text.toString(),
+        )
+
+
     }
 
 }
