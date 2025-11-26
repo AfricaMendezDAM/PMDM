@@ -78,5 +78,7 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
+    private fun findViewById(editTextName: Int) {}
+
 }
 

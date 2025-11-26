@@ -1,5 +1,5 @@
 package com.example.myapplication2
-import com.example.myapplication2.User;
+import User;
 class UserRepository {
 
     private val usersList = mutableListOf<User>()
