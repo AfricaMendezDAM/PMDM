@@ -111,7 +111,7 @@ fun LoginAppearance(
 
         Button(
             onClick = { } ,
-            contentColor = Color.Green
+           // contentColor = Color.Green
         ){
             Text(text= "¿Olvidaste tu contraseña?")
         }
